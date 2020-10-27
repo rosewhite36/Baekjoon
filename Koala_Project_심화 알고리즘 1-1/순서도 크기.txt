@@ -1,0 +1,11 @@
+Width 95pt
+Height 30pt
+
+declaration
+120 80
+
+for
+120 40
+
+if
+95 60
