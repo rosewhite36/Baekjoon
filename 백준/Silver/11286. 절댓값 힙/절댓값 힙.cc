@@ -3,7 +3,10 @@ using namespace std;
 	
 int main(void)
 {
-	priority_queue<int,vector<int>,greater<int>> pq1; //양수
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+	
+    priority_queue<int,vector<int>,greater<int>> pq1; //양수
 	priority_queue<int> pq2; //음수
 	
 	int n, a, t1, t2;
