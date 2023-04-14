@@ -1,0 +1,1 @@
+double a,b;main(){scanf("%lf%lf",&a,&b);printf("%.15lf",a/b);}
