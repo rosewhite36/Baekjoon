@@ -1,23 +1,26 @@
 #include <stdio.h>
 
-int n, m, max, a[100];
-
-void rc(int index, int sum, int element)
-{
-	element++,sum+=a[index];
-	if(index==n || element>3) return;
-
-	if(element==3 && max<sum && sum<=m) max=sum;
-	
-	rc(index+1, sum, element);
-	rc(index+1, sum-a[index], element-1);
-}
-
-
 int main()
 {
+	int a[100];
+	int n, m, max=0, sum;
+	
 	scanf("%d %d", &n, &m);
+	
 	for(int i=0; i<n; i++) scanf("%d", &a[i]);
-	rc(0,0,0);
+	
+	for(int i=0; i<n; i++)
+	{
+		for(int j=0; j<n; j++)
+		{
+			if(j==i) continue;
+			for(int k=0; k<n; k++)
+			{
+				if(k==i || k==j) continue; 
+				sum=a[i]+a[j]+a[k];
+				if(max<sum && sum<=m) max=sum;
+			}
+		}
+	}
 	printf("%d", max);
 }
