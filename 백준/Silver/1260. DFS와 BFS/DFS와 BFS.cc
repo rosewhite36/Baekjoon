@@ -1,14 +1,8 @@
-#include <iostream>
-#include <queue>
-#include <vector>
-#include <algorithm>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-vector<int> b[1001];
-vector<int> d[1001];
-
 int vb[1001], vd[1001];
+vector<int> b[1001], d[1001];
 
 void bfs(int start)
 {
